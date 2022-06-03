@@ -1,0 +1,22 @@
+<div class="nav-container">
+    <nav class="navbar">
+        <h1><a class="text-white text-decoration-none"  href="{{ url_for ('home') }}">ADR</a></h1>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="{{ url_for ('home') }}" class="nav-link">Home</a></li>
+            <li><a href="{{ url_for ('about') }}" class="nav-link">About</a></li>
+            <li><a href="{{ url_for ('contact') }}" class="nav-link">Contact</a></li>
+            <li><a href="{{ url_for ('shop') }}" class="nav-link">Shop</a></li>
+            {% if not current_user.is_authenticated %}
+                <li><a href="{{ url_for ('login') }}" class="nav-link nav-links0-btn">Login</a></li>
+                <li><a href="{{ url_for ('register') }}" class="nav-link nav-links1-btn">Sign Up</a></li>
+            {% else %}
+                <li><a href="{{ url_for ('logout') }}" class="nav-link nav-links0-btn">Logout</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+</div>

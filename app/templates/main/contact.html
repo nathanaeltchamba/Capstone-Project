@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="row mt-5">
+    <div class="col-md-6">
+        <div class="embed-responsive embed-responsive-16by9 mt-5">
+            <iframe class="embed-responsive-item"
+                src="../../static/photos/iykKis85QSq8agmJSll9_Experience+Change+Video-Revised-v.mp4"></iframe>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <h4 class="text-center"><strong>Get In Touch</strong></h4>
+        <form action="" method="POST">
+            <div class="form-group">
+                <input type="text" class="form-control" name="name" id="name" aria-describedby="helpId"
+                    placeholder="Your Full Name">
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" name="email" id="contact_email" aria-describedby="helpId"
+                    placeholder="example@example.com">
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" name="contact_message" id="contact_message" rows="3"
+                    placeholder="Send A Message"></textarea>
+            </div>
+            <div class="form-group">
+                <h5 class="text-center"><strong>Services :</strong></h5>
+                <p class="text-center"><strong>Our Services are customizable</strong></p>
+                <select class="form-control" name="selection_plan" id="selection_plan">
+                    <option disabled selected>Select Your Plan</option>
+                    <option>Success Case Method (SCM)</option>
+                    <option>Impact Evaluation</option>
+                    <option>Performance Monitoring</option>
+                    <option>Process Evaluation</option>
+                    <option>Cost Evaluation</option>
+                    <option>SWOT Analysis</option>
+                    <option>Evaluability Assessment</option>
+                    <option>Program Expansion</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock content %}

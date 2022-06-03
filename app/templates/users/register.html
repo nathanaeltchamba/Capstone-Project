@@ -1,0 +1,79 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="container ">
+    <div class="row d-flex justify-content-center align-items-center ">
+        <div class="col-lg-12 col-xl-11">
+                <div class="card-body p-md-5">
+                    <div class="row justify-content-center">
+                        <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+
+                            <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
+
+                            <form method="POST" action="{{ url_for('register') }}" class="mx-1 mx-md-4">
+
+                                <div class="d-flex flex-row align-items-center mb-2">
+                                    <div class="form-outline flex-fill mb-0">
+                                        <label class="form-label" for="form3Example1c">First Name:</label>
+                                        <input type="text" class="form-control" name="first_name" id="first_name" aria-describedby="helpId"
+                                            placeholder="First Name">
+                                        <label class="form-label mt-2" for="form3Example1c">Last Name:</label>
+                                        <input type="text" class="form-control" name="last_name" id="last_name" aria-describedby="helpId"
+                                            placeholder="Last Name">
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-row align-items-center mb-0">
+                                    <div class="form-outline flex-fill mb-0">
+                                        <label class="form-label" for="form3Example3c">Email:</label>
+                                        <input type="email" class="form-control" name="email" id="email" aria-describedby="helpId" placeholder="Email Address">
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-row align-items-center mb-2">
+                                    <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                                    <div class="form-outline flex-fill mb-0 mt-2">
+                                        <label class="form-label" for="form3Example4c">Password:</label>
+                                        <input type="password" class="form-control" name="password" id="password" aria-describedby="helpId"
+                                            placeholder="Password">
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-row align-items-center mb-2">
+                                    <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                                    <div class="form-outline flex-fill mb-0">
+                                        <label class="form-label" for="form3Example4cd">Confirm Password:</label>
+                                        <input type="password" class="form-control" name="confirm_password" id="confirm_password" aria-describedby="helpId"
+                                            placeholder="Confirm Password">
+                                    </div>
+                                </div>
+
+                                <div class="form-check d-flex justify-content-start mb-2 mt-2" id="terms_of_service">
+                                    I agree to the <a href="#!"> Terms of service</a>
+                                    <input class="form-check-input me-2" type="checkbox" value="Terms of Service" id="form2Example3c" />
+                                </div>
+                                <p class="small fw-bold mt-2 pt-1 mb-0 text-center">Already have an account?
+                                    <a href="{{ url_for ('login') }}" class="login-button">Sign In</a>
+                                </p>
+                                <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                                    <input type="submit" class="btn btn-success btn-block mt-2 mb-5" id="registerbtn" value="Sign Up" />
+                                </div>
+                                
+
+                            </form>
+
+                        </div>
+                        <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+
+                            <img src="../../static/photos/undraw_Completing_re_i7ap.png"
+                                class="img-fluid" alt="Sample image">
+
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

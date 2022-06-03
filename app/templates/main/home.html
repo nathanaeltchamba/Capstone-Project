@@ -1,0 +1,150 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+<div class="container">
+    <h3>
+        {% if current_user.is_authenticated %}
+        <h3 id="welcome" class="text-center pt-5"> Welcome {{ current_user.first_name }} {{ current_user.last_name }}
+        </h3>
+        {% else %}
+        <h3 id="welcome" class="text-center pt-5">Welcome</h3>
+        {% endif %}
+    </h3>
+    <h5 class="text-center">"We place value on your data."</h5>
+    <div class="jumbotron" id="jumbotron">
+        <h1 class="display-2 text-center"><strong>ADR Evaluation Consulting</strong></h1>
+        <p class="lead"></p>
+        <hr class="my-2">
+        <h4 class="text-center">Our Core Values</h4>
+        <p class="text-center">We provide effective solutions that are satisfying to stakeholders</p>
+        <p class="text-center" class="lead">
+            <a class="btn btn-success btn-sm" href="{{ url_for ('about') }}" role="button">Discover More</a>
+        </p>
+    </div>
+
+    {% if current_user.is_authenticated %}
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card card border-0 ">
+                    <div class="card-body">
+                        <p class="card-text">ADR Consulting uses its expertise to provide guidance to
+        
+                            organizations in need of reaching maximum expansion.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card border-0">
+                    <div class="card-body">
+                        <p class="card-text">We integrate traditional program theory with ADR's methodologies to result in
+                            evidence-based practice.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card border-0">
+                    <div class="card-body">
+                        <p class="card-text">ADR serves educational programs, faith-based organizations, behavioral health
+                            providers, communities and agencies.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card border-0">
+                    <div class="card-body">
+                        <p class="card-text">ADR facilitates and coaches its clients to attain optimum growth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <hr>
+        
+        <div class="text-center">
+            <h3>Our Services</h3>
+            <h5 class="mt-2">We are here to help you resolve wellness or business issues. Select from the list below</h5>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-md-4 my-5">
+                <div class="card">
+                    <div class="card-head">
+                        <h4 class="text-center mt-3">Short Training</h4>
+                        <hr>
+                        <div class="card-body">
+                            <ul class="list-unstyled text-center">
+                                <li>Impact Strategy</li>
+                                <li>Theory of Change</li>
+                                <li>Overcoming Pain</li>
+                                <li>Logic Model</li>
+                                <li>Self-Discovery Assessment</li>
+                                <li>Unearthing Your Genius</li>
+                                <li>Research Design</li>
+                                <li>Survey Design</li>
+                                <li>Business Startup Guide</li>
+                                <li>ESC wellness</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <input class="btn btn-success btn-block" type="button" value="Learn More">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 my-5">
+                <div class="card">
+                    <div class="card-head">
+                        <h4 class="text-center mt-3">Half-Day Training</h4>
+                        <hr>
+                        <div class="card-body">
+                            <ul class="list-unstyled text-center">
+                                <li>Impact Strategy</li>
+                                <li>Theory of Change</li>
+                                <li>Impact Metrics</li>
+                                <li>Logic Model</li>
+                                <li>Data Analysis</li>
+                                <li>Unearthing Your Genius</li>
+                                <li>Program Evaluation Design</li>
+                                <li>Survey Design</li>
+                                <li>Report writing</li>
+                                <li>ESC wellness</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <input class="btn btn-success btn-block" type="button" value="Learn More">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 my-5">
+                <div class="card">
+                    <div class="card-head">
+                        <h4 class="text-center mt-3">Full-Day Training</h4>
+                        <hr>
+                        <div class="card-body">
+                            <ul class="list-unstyled text-center">
+                                <li>Impact Strategy</li>
+                                <li>Theory of Change</li>
+                                <li>Impact Metrics</li>
+                                <li>Program Evaluation Design</li>
+                                <li>Research Methods</li>
+                                <li>Unearthing Your Genius</li>
+                                <li>Logic Model</li>
+                                <li>Data Analysis</li>
+                                <li>Evaluation Design</li>
+                                <li>ESC wellness</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <input class="btn btn-success btn-block" type="button" value="Learn More">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+
+</div>
+{% endblock content %}

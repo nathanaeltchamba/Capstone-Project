@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="container py-5">
+    <h3 class="text-center mb-2">ADR Store</h3>
+    <br>
+    <div class="my-3">
+        <h5 id="carttext">Cart Items <i class="fa fa-solid fa-shopping-cart"></i> : <span class="" >{{ cart_size }}</span></h5>
+        <div class="cartbtn">
+            <a href="{{ url_for ('shop_cart') }}" id="cart-btn" class="btn btn-dark">View Cart</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+
+            <!-- List group-->
+            <ul class="list-group shadow">
+                {% for product in products %}
+                    <!-- list group item-->
+                    <li class="list-group-item">
+                        <!-- Custom content-->
+                        <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                            <div class="media-body order-2 order-lg-1">
+                                <h5 class="mt-0 font-weight-bold mb-2">{{ product.name }}</h5>
+                                <p class="font-italic text-muted mb-0 small">{{ product.description }}</p>
+                                <div class="d-flex align-items-center justify-content-between mt-1">
+                                    <h6 class="font-weight-bold my-2">${{ product.price }}</h6>
+                                </div>
+                            </div><img src="{{ product.image }}" alt="{{ product.name }}" width="200"
+                                class="ml-lg-5 order-1 order-lg-2">
+                        </div>
+                        <a href="{{ url_for ('shop_cart_add', product_id=product.id) }}" class="btn btn-success float-right mr-5"> Add to Cart</a>
+                        <!-- End -->
+                    </li>
+                    <!-- End -->
+                {% endfor %}
+            </ul>
+            <!-- End -->
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
